@@ -5,4 +5,5 @@ https://leetcode.com/problems/merge-intervals/submissions/1818888521/
 
 https://leetcode.com/problems/merge-sorted-array/submissions/1818902447/
 
-https://leetcode.com/problems/find-the-duplicate-number/submissions/1818906758/
+https://leetcode.com/problems/find-the-duplicate-number/submissions/1818906758/     -> sorting approach
+https://leetcode.com/problems/find-the-duplicate-number/submissions/1819215717/     -> slow-fast pointers linked list cycle approach

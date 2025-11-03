@@ -1,0 +1,63 @@
+https://leetcode.com/problems/find-missing-and-repeated-values/submissions/1819265458/  -> maths
+
+https://takeuforward.org/plus/dsa/problems/count-inversions     -> merge sort
+
+class Solution {
+public:
+    int count = 0;
+    void merge(vector<int>& arr, int low, int mid, int high) {
+        vector<int> temp;
+        int left = low, right = mid + 1;
+
+        while (left <= mid && right <= high) {
+            if (arr[left] <= arr[right])
+                temp.push_back(arr[left++]);
+            // if left element is greater than right
+            else{
+                // we can make (mid - left + 1) pairs with the right element
+                count += (mid - left + 1);
+                temp.push_back(arr[right++]);
+            }
+        }
+
+        while (left <= mid)
+            temp.push_back(arr[left++]);
+
+        while (right <= high)
+            temp.push_back(arr[right++]);
+
+        for (int i = low; i <= high; i++)
+            arr[i] = temp[i - low];
+    }
+
+    void mergeSort(vector<int>& arr, int low, int high) {
+        if (low >= high)
+            return;
+
+        int mid = (low + high) / 2;
+
+        mergeSort(arr, low, mid);
+
+        mergeSort(arr, mid + 1, high);
+
+        merge(arr, low, mid, high);
+    }
+    long long int numberOfInversions(vector<int> nums) {
+        mergeSort(nums, 0, nums.size() - 1);
+        return count;
+    }
+};
+
+https://leetcode.com/problems/search-a-2d-matrix/submissions/1819341213/    -> greedy approach
+https://leetcode.com/problems/search-a-2d-matrix/submissions/1819346389/    -> binary search approach
+
+https://leetcode.com/problems/powx-n/submissions/1819359551/
+
+https://leetcode.com/problems/majority-element/submissions/1819377064/      -> Boyer-Moore voting algorithm
+
+https://leetcode.com/problems/majority-element-ii/submissions/1819403345/   -> Generalized Boyer-Moore algorithm
+https://leetcode.com/problems/majority-element-ii/submissions/1819402291/   -> Solution for n/3 majority
+
+https://leetcode.com/problems/unique-paths/submissions/1819425910/
+
+https://leetcode.com/problems/reverse-pairs/submissions/1819455841/         -> merge sort 
