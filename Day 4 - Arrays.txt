@@ -1,0 +1,7 @@
+https://leetcode.com/problems/two-sum/submissions/1820720100/
+
+https://leetcode.com/problems/4sum/submissions/1820754971/
+https://leetcode.com/problems/4sum/submissions/1820759049/      -> Generalized k-Sum 
+
+https://leetcode.com/problems/longest-consecutive-sequence/submissions/1820774854/  -> unordered set
+https://leetcode.com/problems/longest-consecutive-sequence/submissions/1820776087/  -> sorting (faster??!!)
